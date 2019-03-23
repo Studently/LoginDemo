@@ -2,13 +2,13 @@ package cn.edu.sicau.service;
 
 
 import cn.edu.sicau.dao.UserDao;
+import cn.edu.sicau.dao.UserDaoFactory;
 import cn.edu.sicau.domain.User;
 import cn.edu.sicau.exception.UserException;
 
 public class UserService {
-	
-	private UserDao userDao=new UserDao();
-	
+	//依赖UserDao
+	private UserDao userDao= UserDaoFactory.getUserDao();
 	/**
 	 *注册功能
 	 * @param user
